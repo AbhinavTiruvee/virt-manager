@@ -512,7 +512,7 @@ class XMLBuilder(object):
     def validate_generic_name(name_label, val):
         # Rather than try and match libvirt's regex, just forbid things we
         # know don't work
-        forbid = [" "]
+        forbid = ["/"]
         if not val:
             # translators: value is a generic object type name
             raise ValueError(_("A name must be specified for the %s") % name_label)
